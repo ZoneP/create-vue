@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 // export const useTodos = defineStore('todos', () => {
 // 	let todos = ref([]);
-// 	const changeTodos = (val: string) => {
+// 	const changeTodos = (val) => {
 // 		todos.value.push(val);
 // 	}
 // 	return {
@@ -13,11 +13,11 @@ import { defineStore } from 'pinia'
 
 export const useTodos = defineStore('todos', {
 	state: () => ({
-		todos: [] as string[]
+		todos: []
 	}),
 	getters: {},
 	actions: {
-		changeTodos(val: string) {
+		changeTodos(val) {
 			console.log(val);
 			console.log(this, this.todos)
 			this.todos.push(val);
